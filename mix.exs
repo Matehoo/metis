@@ -1,9 +1,9 @@
-defmodule ElixirBoilerplate.Mixfile do
+defmodule Metis.Mixfile do
   use Mix.Project
 
   def project do
     [
-      app: :elixir_boilerplate,
+      app: :metis,
       version: "0.0.1",
       elixir: "~> 1.12",
       erlang: "~> 24.1",
@@ -22,7 +22,7 @@ defmodule ElixirBoilerplate.Mixfile do
 
   def application do
     [
-      mod: {ElixirBoilerplate.Application, []},
+      mod: {Metis.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end
@@ -105,9 +105,9 @@ defmodule ElixirBoilerplate.Mixfile do
 
   defp releases do
     [
-      elixir_boilerplate: [
-        version: {:from_app, :elixir_boilerplate},
-        applications: [elixir_boilerplate: :permanent],
+      metis: [
+        version: {:from_app, :metis},
+        applications: [metis: :permanent],
         include_executables_for: [:unix],
         steps: [:assemble, :tar]
       ]

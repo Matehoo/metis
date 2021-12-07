@@ -1,6 +1,6 @@
 import Config
 
-config :elixir_boilerplate, ElixirBoilerplateWeb.Endpoint,
+config :metis, MetisWeb.Endpoint,
   cache_static_manifest: "priv/static/cache_manifest.json",
   server: true
 

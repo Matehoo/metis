@@ -2,23 +2,23 @@ import Config
 
 version = Mix.Project.config()[:version]
 
-config :elixir_boilerplate,
-  ecto_repos: [ElixirBoilerplate.Repo],
+config :metis,
+  ecto_repos: [Metis.Repo],
   version: version
 
 config :phoenix, :json_library, Jason
 
-config :elixir_boilerplate, ElixirBoilerplateWeb.Endpoint,
-  pubsub_server: ElixirBoilerplate.PubSub,
-  render_errors: [view: ElixirBoilerplateWeb.Errors.View, accepts: ~w(html json)]
+config :metis, MetisWeb.Endpoint,
+  pubsub_server: Metis.PubSub,
+  render_errors: [view: MetisWeb.Errors.View, accepts: ~w(html json)]
 
-config :elixir_boilerplate, ElixirBoilerplate.Repo, start_apps_before_migration: [:ssl]
+config :metis, Metis.Repo, start_apps_before_migration: [:ssl]
 
-config :elixir_boilerplate, Corsica, allow_headers: :all
+config :metis, Corsica, allow_headers: :all
 
-config :elixir_boilerplate, ElixirBoilerplate.Gettext, default_locale: "en"
+config :metis, Metis.Gettext, default_locale: "en"
 
-config :elixir_boilerplate, ElixirBoilerplateWeb.ContentSecurityPolicy, allow_unsafe_scripts: false
+config :metis, MetisWeb.ContentSecurityPolicy, allow_unsafe_scripts: false
 
 config :esbuild,
   version: "0.13.13",
